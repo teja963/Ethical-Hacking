@@ -1,0 +1,50 @@
+1.Title: Password Transmitted over HTTP
+2.Domain: http://zero.webappsecurity.com/login.html
+3.Attack Pattern: <a HrEf=JaVaScRiPt:netsparker(0x00391F)>
+4.Impact Level: Very High
+5.Request:
+
+GET /login.html HTTP/1.1
+Host: zero.webappsecurity.com
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-us,en;q=0.5
+Cache-Control: no-cache
+Referer: http://zero.webappsecurity.com/
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.39
+45.0 Safari/537.36
+
+6.Response:
+
+<div class="control-group">
+<label class="control-label" for="user_password">Password</label>
+<div class="controls">
+<input type="password" id="user_password" name="user_password" tabindex="2" autocomplete="off"/>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="user_remember_me">Keep me signed in</label>
+
+7.Vulnerability Details
+
+     This Cross-site Scripting allows the attacker to execute the dynamic Script in the content of the application, which helps the attacker to steal user credentials in the application interface, It helps the attacker to change the script in the required application to get the user cookies which is highly unauthorized way and may leads to effect the user in very unpredictable way
+
+8.Impact
+
+ The impact of the Cross-site Scripting is very risk Hijacking user's active session, mounting phishing attacks, and may perform MIMT attack
+    
+
+9.External References
+
+1. OWSAP -Cross-site Scripting
+2.XSS shell
+3.XSS Tunnelling
+
+
+10.Remedy
+  You should implement a strong Content Security Policy (CSP) as a defense-in-depth measure if an XSS vulnerability is
+mistakenly introduced. Due to the complexity of XSS-Prevention and the lack of secure standard behavior in programming
+languages and frameworks, XSS vulnerabilities are still common in web applications.
+
+
