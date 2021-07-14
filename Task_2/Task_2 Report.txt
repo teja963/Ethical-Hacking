@@ -26,23 +26,23 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; x64) AppleWebKit/537.36 (KHTML, like G
 <div class="control-group">
 <label class="control-label" for="user_remember_me">Keep me signed in</label>
 
-7.----Vulnerability Details---------------
+7.Vulnerability Details
 
      This Cross-site Scripting allows the attacker to execute the dynamic Script in the content of the application, which helps the attacker to steal user credentials in the application interface, It helps the attacker to change the script in the required application to get the user cookies which is highly unauthorized way and may leads to effect the user in very unpredictable way
 
-8.-----Impact------------------------------
+8.Impact
 
  The impact of the Cross-site Scripting is very risk Hijacking user's active session, mounting phishing attacks, and may perform MIMT attack
     
 
-9.------External References--------------
+9.External References
 
 1. OWSAP -Cross-site Scripting
 2.XSS shell
 3.XSS Tunnelling
 
 
-10.----------Remedy--------------------------------
+10.Remedy
   You should implement a strong Content Security Policy (CSP) as a defense-in-depth measure if an XSS vulnerability is
 mistakenly introduced. Due to the complexity of XSS-Prevention and the lack of secure standard behavior in programming
 languages and frameworks, XSS vulnerabilities are still common in web applications.
